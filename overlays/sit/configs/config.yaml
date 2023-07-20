@@ -5,7 +5,7 @@ app:
   name: producer
 
 server:
-  port: 8081
+  port: 8080
   timeout: 15
   
 log:
@@ -15,7 +15,7 @@ log:
 
 postgres:
   db-name: pan-db
-  host: 34.126.178.29
+  host: 172.28.240.42
   port: 5432
   pool-size: 30
 
