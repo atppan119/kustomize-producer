@@ -1,28 +1,33 @@
 # don't forget to update config.model
 environment: sit
 
-server:
-  port: 8080
-  writetimeout: 15
-  readtimeout: 15
-  idletimeout: 60
-  ctx-timeout: 10
-  force-retry: true
+app:
+  name: producer
 
+server:
+  port: 8081
+  timeout: 15
+  
 log:
-  environment: dev
+  environment: production
   level: info
+  format: json
 
 postgres:
-  db-name: management_api_gw
+  db-name: pan-db
   host: 34.126.178.29
   port: 5432
   pool-size: 30
 
-token:
-  type: BEARER
-  expired-in-second: 300
-  refresh-expired-in-second: 86400
+kafka:
+  address:
+    - kafka.poc.internal:9092
+  topic: 
+    - atp-user-topic
+  consume-group: atp-user-consumer-group
+
+user-list-key: ATP_USER_LIST
+
   
 
 

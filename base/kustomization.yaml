@@ -5,6 +5,8 @@ resources:
   - resources/deployment.yaml
   - resources/service.yaml
 
+namespace: atp-training
+
 configMapGenerator:
 
   # can be other file type

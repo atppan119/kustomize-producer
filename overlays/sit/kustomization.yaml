@@ -4,6 +4,8 @@ kind: Kustomization
 resources:
 - ../../base
 
+namespace: atp-training
+
 images:
 - name: asia.gcr.io/poc-innovation-iot/atp-user-producer
   newTag: 103eda26
