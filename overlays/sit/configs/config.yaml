@@ -26,8 +26,7 @@ postgres:
 kafka:
   address:
     - kafka.poc.internal:9092
-  topic: atp2-user-topic
-  consume-group: atp-user-consumer-group
+  topic: atp-user-topic
 
 user-list-key: ATP_USER_LIST
 
